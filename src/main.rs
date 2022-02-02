@@ -1,6 +1,7 @@
 #![no_std]
 #![no_main]
 
+mod boot;
 mod console;
 use core::panic::PanicInfo;
 use crate::console::Console;
@@ -21,7 +22,7 @@ macro_rules! println {
 }
 
 #[no_mangle]
-pub extern "C" fn _start() {
+pub extern "C" fn kmain() {
     println!("test");
 }
 

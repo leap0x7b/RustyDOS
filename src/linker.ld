@@ -1,7 +1,8 @@
 ENTRY(_start)
 
 SECTIONS {
-    . = 0x0B00;
+    dsk_stack = 0x0B00;
+    . = dsk_stack;
 
     .text : {
         *(.text*)
